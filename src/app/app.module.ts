@@ -7,6 +7,9 @@ import { TrackerComponent } from './tracker/tracker.component';
 import { HomeComponent } from './home/home.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NavComponent } from './nav/nav.component';
+import { ProfileComponent } from './profile/profile.component';
+import { LogComponent } from './log/log.component';
+import { ShareComponent } from './share/share.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { NavComponent } from './nav/nav.component';
     TrackerComponent,
     HomeComponent,
     MessagesComponent,
-    NavComponent
+    NavComponent,
+    ProfileComponent,
+    LogComponent,
+    ShareComponent
   ],
   imports: [
     BrowserModule
