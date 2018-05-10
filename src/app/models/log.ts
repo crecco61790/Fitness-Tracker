@@ -1,18 +1,16 @@
 export class Log {
 
     Users: User[] = [];
-    SharedEntries: Entry[] = [];
 }
 
 export class Entry {
-    Date: string;
-    MuscleGroup: string;
-    User: string;
-    Workout: string;
+    Date: string = "5/10/18";
+    MuscleGroup: string = "Chest";
+    User: string = "Steve C";
+    Workout: string = "10 Reps";
     Share: boolean;
 }
 
 export class User {
     Name: string;
-    LoggedEntries: Entry[] = [];
-}
+    MyEntries: Entry[] = [];
