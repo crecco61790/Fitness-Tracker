@@ -10,6 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { LogComponent } from './log/log.component';
 import { ShareComponent } from './share/share.component';
 import { ShareService } from './services/share.service';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ShareService } from './services/share.service';
     NavComponent,
     ProfileComponent,
     LogComponent,
-    ShareComponent
+    ShareComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
