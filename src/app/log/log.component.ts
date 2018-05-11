@@ -26,9 +26,9 @@ export class LogComponent implements OnInit {
   ngOnInit() {
   }
 
-  postToLog(e: MouseEvent){
+  postToLog(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
-    this.Model.Dates.push({Date: "2/30/18"});
+    this.Model.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false});
     
     
   }
