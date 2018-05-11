@@ -1,7 +1,5 @@
 export class Log {
 
-    Dates: Date[] = [{Date: "5/5/18"}];
-
     Entries: Entry[]=[];
 
     Users: User[] = [];
@@ -29,14 +27,6 @@ export class User {
     Weight: string;
 constructor(Name: string){
     this.Name = Name;
-}
-}
-
-export class Date {
-    Date: string;
-
-constructor(Date: string){
-    this.Date = Date;
+    }
 }
 
-}
