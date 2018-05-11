@@ -1,1 +1,17 @@
-
+<div class="col"> 
+        <div class="card" >
+            <div class="card-header">Log</div>
+            <ul class="list-group list-group-flush">
+                <li *ngFor="let dat of Model.Dates" class="list-group-item">
+                    <p><b>Date: </b>{{dat.Date}}<br>                  
+                  </p>                    
+                    <span><button type="submit" class="btn btn-success"
+                      (click)="postToShare($event)"
+                      >Share!</button></span>
+                </li>
+                <span><button type="submit" class="btn btn-success"
+                    (click)="postToShare($event)"
+                    >Share!</button></span>              
+              </ul>
+          </div>
+    </div>

@@ -12,7 +12,6 @@ import { Http } from "@angular/http";
 export class LogComponent implements OnInit {
   
   Model = new Log();
-  TestEntry = new Entry();
 
   private _api = "http://localhost:8080/log";
 
@@ -26,6 +25,10 @@ export class LogComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  postToLog(e: MouseEvent, Date: string){
+    this.Model.Dates.push({Date: Date});
+    
+    
+  }
 
 }

@@ -1,27 +1,26 @@
 <div class="row">
     <div class="col">
-<form action="/action_page.php">
+<form>
+    <div class="form-group">
+        <label for="comment">Date:</label><br>
+        <input #Date placeholder="" />
+      </div>
   <div class="form-group">
-    <label for="date">Date:</label>
-    <input type="date" class="form-control" id="date">
-  </div>
-  <div class="form-group">
-      <label for="sel1">Muscle Group:</label>
-      <select class="form-control" id="sel1">
-        <option>Chest</option>
-        <option>Back</option>
-        <option>Arms</option>
-        <option>Legs</option>
-        <option>Abs</option>
-        <option>Cardio</option>
-      </select>
+      <label for="comment">Muscle Group:</label><br>
+      <input #MuscleGroup placeholder="" />
     </div>
   <div class="form-group">
-  <label for="comment">Workout:</label>
-  <textarea class="form-control" rows="4" id="comment"></textarea>
+  <label for="comment">Workout:</label><br>
+  <input #Workout placeholder="" />
 </div>
+<div class="form-group">
+    <label for="comment">Reps:</label><br>
+    <input #Reps placeholder="" />
+  </div>
 
-  <button type="submit" class="btn btn-primary">Log it!</button>
+  <button type="submit" class="btn btn-primary"
+  (click)="postToLog($event, Date)"
+  >Log it!</button>
 </form>
 </div>
 </div>
@@ -31,14 +30,30 @@
         <div class="card" >
             <div class="card-header">Log</div>
             <ul class="list-group list-group-flush">
-                <li *ngFor="let user of Model.Users" class="list-group-item">
-                    {{user.Name}}
-                </li>
-                <p><b>Date: </b>{{TestEntry.Date}}<br>
-                  <b>Muscle Group: </b> {{TestEntry.MuscleGroup}}<br>
-                  <b>Workout: </b>{{TestEntry.Workout}}<br>
-                <span><button type="submit" class="btn btn-success">Share!</button></span>
-              </p>
+                <li *ngFor="let entry of Model.Entries" class="list-group-item">
+                    <p><b>Date: </b>{{entry.Date}}<br>
+                    <b>Muscle Group: </b> {{entry.MuscleGroup}}<br>
+                    <b>Workout: </b>{{entry.Workout}}<br>
+                    <b>Reps: </b>{{entry.Reps}}<br>                  
+                  </p>                    
+                    <span><button type="submit" class="btn btn-success"
+                      (click)="postToShare($event)"
+                      >Share!</button></span>
+                </li>              
+              </ul>
+          </div>
+    </div>
+    <div class="col"> 
+        <div class="card" >
+            <div class="card-header">Log</div>
+            <ul class="list-group list-group-flush">
+                <li *ngFor="let dat of Model.Dates" class="list-group-item">
+                    <p><b>Date: </b>{{dat.Date}}<br>                  
+                  </p>                    
+                    <span><button type="submit" class="btn btn-success"
+                      (click)="postToShare($event)"
+                      >Share!</button></span>
+                </li>              
               </ul>
           </div>
     </div>
