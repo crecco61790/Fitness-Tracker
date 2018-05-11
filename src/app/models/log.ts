@@ -10,13 +10,15 @@ export class Entry {
     public MuscleGroup: string;
     public Workout: string;
     public Reps: string;
+    public UserName: string;
     public Share: boolean;
 
-    constructor(Date: string, MuscleGroup: string, Workout: string, Reps: string){
+    constructor(Date: string, MuscleGroup: string, Workout: string, Reps: string, UserName: string){
         this.Date = Date;
         this.MuscleGroup = MuscleGroup;
         this.Workout = Workout;
         this.Reps = Reps;
+        this.UserName = UserName;
         this.Share = false;
     }
 }

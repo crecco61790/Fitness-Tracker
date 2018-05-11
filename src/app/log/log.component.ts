@@ -31,13 +31,15 @@ export class LogComponent implements OnInit {
   postToLog(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
     if(date!="" && musclegroup!="" && workout!="" && reps!=""){
-    this.Model.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false});
-    this.Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this.Me.Name});  
+    this.Model.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this.Me.Name});    
     }
   }
 
   postToShare(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
+    if(date!="" && musclegroup!="" && workout!="" && reps!=""){
     this.Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this.Me.Name});  
+    
+    }
   }
 }

@@ -1,28 +1,34 @@
 <div class="row">
-    <div class="col">
 <form>
+    <div class="col">
     <div class="form-group">
         <label for="comment">Date:</label><br>
         <input #Date placeholder="" />
       </div>
   <div class="form-group">
-      <label for="comment">Muscle Group:</label><br>
-      <input #MuscleGroup placeholder="" />
+        <label for="comment">Workout:</label><br>
+        <input #Workout placeholder="" />
     </div>
+</div>
+<div class="col">
   <div class="form-group">
-  <label for="comment">Workout:</label><br>
-  <input #Workout placeholder="" />
+  <label for="comment">Muscle Group:</label><br>
+  <input #MuscleGroup placeholder="" />
 </div>
 <div class="form-group">
     <label for="comment">Reps:</label><br>
     <input #Reps placeholder="" />
   </div>
-
-  <button type="submit" class="btn btn-primary"
-  (click)="postToLog($event, Date.value, MuscleGroup.value, Workout.value, Reps.value)"
-  >Log it!</button>
-</form>
 </div>
+<div class="col">
+    <button type="submit" class="btn btn-primary"
+    (click)="postToLog($event, Date.value, MuscleGroup.value, Workout.value, Reps.value)"
+    >Log it!</button>
+    <button type="submit" class="btn btn-success"
+    (click)="postToShare($event, Date.value, MuscleGroup.value, Workout.value, Reps.value)"
+    >Share!</button>
+</div>      
+</form>
 </div>
 <hr>
 <div class="row">
@@ -37,9 +43,6 @@
                     <b>Workout: </b>{{entry.Workout}}<br>
                     <b>Reps: </b>{{entry.Reps}}<br>                  
                   </p>                    
-                    <span><button type="submit" class="btn btn-success"
-                      (click)="postToShare($event)"
-                      >Share!</button></span>
                 </li>              
               </ul>
           </div>
