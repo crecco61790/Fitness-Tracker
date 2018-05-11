@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogComponent } from './log/log.component';
 import { ShareComponent } from './share/share.component';
+import { ShareService } from './services/share.service';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { ShareComponent } from './share/share.component';
   ])
 
   ],
-  providers: [],
+  providers: [ShareService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
