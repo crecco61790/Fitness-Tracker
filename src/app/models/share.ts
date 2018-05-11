@@ -1,4 +1,4 @@
-export class Log {
+export class Share {
 
     Entries: Entry[]=[];
 
@@ -27,4 +27,3 @@ constructor(Name: string){
     this.Name = Name;
     }
 }
-

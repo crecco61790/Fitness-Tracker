@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Log, Entry, User } from '../models/log';
+import { Share, Entry, User } from '../models/share';
 import { Router } from '@angular/router';
 import { Http } from "@angular/http";
 import { ShareService } from '../services/share.service';

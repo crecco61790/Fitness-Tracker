@@ -44,3 +44,20 @@
               </ul>
           </div>
     </div>
+</div>
+    <div class="row">
+            <div class="col"> 
+                <div class="card" >
+                    <div class="card-header">Swell Board</div>
+                    <ul class="list-group list-group-flush">
+                        <li *ngFor="let share of Share.Share" class="list-group-item">
+                           <p><b>Date: </b> {{share.Date}}<br>
+                           <b>Muscle Group: </b> {{share.MuscleGroup}}<br>
+                           <b>Workout: </b> {{share.Workout}}<br>
+                           <b>Reps: </b> {{share.Reps}}<br>
+                            </p>   
+                        </li>              
+                      </ul>
+                  </div>
+            </div>
+    </div>
