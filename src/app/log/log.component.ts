@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Log, Entry, User } from '../models/log';
 import { Router } from '@angular/router';
 import { Http } from "@angular/http";
+import { ShareService } from '../services/share.service';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class LogComponent implements OnInit {
 
   constructor(
     private http: Http,
-    private _Router: Router
+    private _Router: Router,
+    public Share: ShareService
   ) { 
 
   }

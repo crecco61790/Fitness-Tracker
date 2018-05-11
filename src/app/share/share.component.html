@@ -1,14 +1,14 @@
 <div class="row">
     <div class="col"> 
         <div class="card" >
-            <div class="card-header">Log</div>
+            <div class="card-header">Swell Board</div>
             <ul class="list-group list-group-flush">
-                <li *ngFor="let entry of ShareModel.Entries" class="list-group-item">
-                    <p><b>Date: </b>{{entry.Date}}<br>
-                    <b>Muscle Group: </b> {{entry.MuscleGroup}}<br>
-                    <b>Workout: </b>{{entry.Workout}}<br>
-                    <b>Reps: </b>{{entry.Reps}}<br>                  
-                  </p>                    
+                <li *ngFor="let share of Share.Share" class="list-group-item">
+                   <p><b>Date: </b> {{share.Date}}<br>
+                   <b>Muscle Group: </b> {{share.MuscleGroup}}<br>
+                   <b>Workout: </b> {{share.Workout}}<br>
+                   <b>Reps: </b> {{share.Reps}}<br>
+                    </p>   
                 </li>              
               </ul>
           </div>
