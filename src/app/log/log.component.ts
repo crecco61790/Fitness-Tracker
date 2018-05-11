@@ -30,11 +30,13 @@ export class LogComponent implements OnInit {
 
   postToLog(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
-    this.Model.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false});  
+    this.Model.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false});
+    this.Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps});  
+  
   }
 
   postToShare(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
-    this.Model.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false});  
+    this.Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps});  
   }
 }
