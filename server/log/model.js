@@ -12,9 +12,7 @@ function Log() {
     this.ShareEntry = (date, musclegroup, workout, reps, share, username) => {
         this.sharedEntries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: share, UserName: username });
     }
-    this.Test = (date) => {
-        this.Entries.push({Date: date});
-    }
+    
 
 }
 

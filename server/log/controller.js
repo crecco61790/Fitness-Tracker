@@ -26,18 +26,8 @@ module.exports = app
     
     try {
         log.ShareEntry(req.body.Date, req.body.MuscleGroup, req.body.Workout, req.body.Reps, req.body.Share, req.body.UserName);
-        res.send( { success: true } );            
+        res.send( { success: true } );
     } catch (error) {
         res.status(403).send({ success: false, message: error.message });
-    }
-})
-
-.post('/test', (req, res) => {
-    
-    try {
-        log.Test("Test Worked");
-        res.send( { success: true } );            
-    } catch (error) {
-        res.status(403).send({ success: false, message: "Not Sure why?" });
     }
 })
