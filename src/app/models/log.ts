@@ -25,8 +25,8 @@ export class Entry {
 
 export class User {
     Name: string;
-constructor(Name: string){
-    this.Name = Name;
+constructor(){
+    this.Name;
     }
 }
 

@@ -11,6 +11,7 @@ import { LogComponent } from './log/log.component';
 import { ShareComponent } from './share/share.component';
 import { ShareService } from './services/share.service';
 import { LoginComponent } from './login/login.component';
+import { LogService } from './services/log.service';
 
 
 @NgModule({
@@ -31,11 +32,12 @@ import { LoginComponent } from './login/login.component';
       { path: 'profile', component: ProfileComponent},
       { path: 'log', component: LogComponent},
       { path: 'share', component: ShareComponent},
+      { path: 'login', component: LoginComponent},
       { path: '', redirectTo: '/home', pathMatch: 'full'}
   ])
 
   ],
-  providers: [ShareService],
+  providers: [ShareService, LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
