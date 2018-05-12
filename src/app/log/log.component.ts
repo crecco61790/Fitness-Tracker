@@ -36,15 +36,17 @@ export class LogComponent implements OnInit {
   postToLog(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
     if(date!="" && musclegroup!="" && workout!="" && reps!=""){
-    this._Log.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this._Log.Me.Name});    
+    this._Log.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this._Log.Me.Name})
+    this.http.post(this._api + "/entries", {Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this._Log.Me.Name});    
     }
   }
 
   postToShare(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
     if(date!="" && musclegroup!="" && workout!="" && reps!=""){
-    this._Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this._Log.Me.Name, Share: true});  
-    
+    this._Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this._Log.Me.Name, Share: true})  
+    this.http.post(this._api + "/share", {Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: true, UserName: this._Log.Me.Name});    
+  
     }
   }
 }

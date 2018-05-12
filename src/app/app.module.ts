@@ -9,8 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogComponent } from './log/log.component';
 import { ShareComponent } from './share/share.component';
-import { ShareService } from './services/share.service';
 import { LoginComponent } from './login/login.component';
+
+import { ShareService } from './services/share.service';
 import { LogService } from './services/log.service';
 
 

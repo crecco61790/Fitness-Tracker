@@ -3,6 +3,7 @@ import { Share, Entry, User } from '../models/share';
 import { Router } from '@angular/router';
 import { Http } from "@angular/http";
 import { ShareService } from '../services/share.service';
+import { LogService } from '../services/log.service';
 
 
 @Component({
@@ -12,14 +13,21 @@ import { ShareService } from '../services/share.service';
 })
 export class ShareComponent implements OnInit {
 
-  
+  Me : User;
+
   private _api = "http://localhost:8080/share";
 
   constructor(
     private http: Http,
     private _Router: Router,
-    public _Share: ShareService
+    public _Share: ShareService,
+    public _Log: LogService
+
   ) { 
+    this.Me = _Log.Me;
+    if(!this.Me){
+      _Router.navigate(['/login']);
+    }
 
   }
 
