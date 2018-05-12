@@ -13,7 +13,7 @@ import { LogService } from '../services/log.service';
 })
 export class LogComponent implements OnInit {
   
-
+  Me : User;
 
   private _api = "http://localhost:8080/log";
 
@@ -24,6 +24,10 @@ export class LogComponent implements OnInit {
     public _Log: LogService
   ) { 
 
+    this.Me = _Log.Me;
+    if(!this.Me){
+      _Router.navigate(['/login']);
+    }
   }
 
   ngOnInit() {
