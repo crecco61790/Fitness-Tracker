@@ -40,7 +40,7 @@ export class LogComponent implements OnInit {
   postToShare(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
     if(date!="" && musclegroup!="" && workout!="" && reps!=""){
-    this._Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this._Log.Me.Name});  
+    this._Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this._Log.Me.Name, Share: true});  
     
     }
   }

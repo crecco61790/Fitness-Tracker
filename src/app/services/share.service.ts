@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Router } from '@angular/router';
+import { Log, Entry, User } from '../models/log';
 
 @Injectable()
 export class ShareService {
 
-  Share: {Date: string, MuscleGroup: string, Workout: string, Reps: string, UserName: string}[];
+  Share: Entry[];
 
   constructor() { 
-    this.Share = []
+    this.Share = [];
   }
 
 }

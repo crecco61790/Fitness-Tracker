@@ -10,7 +10,7 @@ export class LogService {
   Me: User;
   Entries: Entry[];
 
-  constructor(private http: Http, private _Share: ShareService, private _Router: Router) {
+  constructor(private http: Http, private _Router: Router) {
 
    }
    login(name: string, password: string){

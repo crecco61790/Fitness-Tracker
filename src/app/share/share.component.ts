@@ -18,7 +18,7 @@ export class ShareComponent implements OnInit {
   constructor(
     private http: Http,
     private _Router: Router,
-    public Share: ShareService
+    public _Share: ShareService
   ) { 
 
   }

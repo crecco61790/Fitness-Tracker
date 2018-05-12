@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LogService } from '../services/log.service';
+import { ShareService } from '../services/share.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { LogService } from '../services/log.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private _Log: LogService) { }
+  constructor(private _Log: LogService, private _Share: ShareService) { }
 
   ngOnInit() {
   }
