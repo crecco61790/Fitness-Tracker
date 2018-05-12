@@ -13,8 +13,7 @@ import { LogService } from '../services/log.service';
 })
 export class LogComponent implements OnInit {
   
-  Model = new Log();
-  Me = new User();
+
 
   private _api = "http://localhost:8080/log";
 
