@@ -9,6 +9,7 @@ export class LogService {
 
   Me: User;
   Entries: Entry[];
+  token;
 
   constructor(private http: Http, private _Router: Router) {
 
@@ -21,6 +22,11 @@ export class LogService {
         this.Entries = [];
     }
   }
+  oAuthLogin(name: string, token:string){
+    this.Me = { Name: name };
+    this.token = token;
+    this._Router.navigate(['/log']);
+}
 
 }
 
