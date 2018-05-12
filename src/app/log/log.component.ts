@@ -21,7 +21,7 @@ export class LogComponent implements OnInit {
   constructor(
     private http: Http,
     private _Router: Router,
-    public Share: ShareService,
+    public _Share: ShareService,
     public _Log: LogService
   ) { 
 
@@ -33,14 +33,14 @@ export class LogComponent implements OnInit {
   postToLog(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
     if(date!="" && musclegroup!="" && workout!="" && reps!=""){
-    this.Model.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this._Log.Me.Name});    
+    this._Log.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this._Log.Me.Name});    
     }
   }
 
   postToShare(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
     e.preventDefault();
     if(date!="" && musclegroup!="" && workout!="" && reps!=""){
-    this.Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this._Log.Me.Name});  
+    this._Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this._Log.Me.Name});  
     
     }
   }

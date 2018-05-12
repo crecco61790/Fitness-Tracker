@@ -8,6 +8,7 @@ import { ShareService } from './share.service';
 export class LogService {
 
   Me: User;
+  Entries: Entry[];
 
   constructor(private http: Http, private _Share: ShareService, private _Router: Router) {
 
@@ -17,6 +18,7 @@ export class LogService {
         // Log the user in
         this.Me = { Name: name };
         this._Router.navigate(['/log']);
+        this.Entries = [];
     }
   }
 
