@@ -45,7 +45,7 @@ export class LogComponent implements OnInit {
     e.preventDefault();
     if(date!="" && musclegroup!="" && workout!="" && reps!=""){
     this._Share.Share.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, UserName: this._Log.Me.Name, Share: true})  
-    this.http.post(this._api + "/share", {Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: true, UserName: this._Log.Me.Name});    
+    this.http.post(this._api + "/share", {Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: true, UserName: this._Log.Me.Name}).subscribe();    
   
     }
   }
