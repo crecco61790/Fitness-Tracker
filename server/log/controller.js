@@ -12,6 +12,9 @@ module.exports = app
 
 .get('/share', (req, res) => res.send(log.sharedEntries))
 
+.get('/entries', (req, res) => res.send(log.Entries))
+
+
 .post('/entries', (req, res) => {
     console.log(req.body);
     

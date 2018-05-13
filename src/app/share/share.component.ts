@@ -14,6 +14,7 @@ import { LogService } from '../services/log.service';
 export class ShareComponent implements OnInit {
 
   Me : User;
+  Share = new Share();
 
   private _api = "http://localhost:8080/share";
 
@@ -25,9 +26,13 @@ export class ShareComponent implements OnInit {
 
   ) { 
     this.Me = _Log.Me;
+    this.http.get('http://localhost:8080/log/share')
+    .subscribe(data=> this._Share.Share = data.json());
+    
     if(!this.Me){
       _Router.navigate(['/login']);
     }
+
 
   }
 
