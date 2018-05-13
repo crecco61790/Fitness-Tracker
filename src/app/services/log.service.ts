@@ -22,9 +22,10 @@ export class LogService {
         this.Me = { Name: name };
         this._Router.navigate(['/log']);
         this.Entries = [];
-    }
-    
+    }    
   }
+
+
   oAuthLogin(name: string, token:string){
     this.Me = { Name: name };
     this.token = token;

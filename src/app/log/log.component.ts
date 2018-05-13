@@ -13,8 +13,8 @@ import { LogService } from '../services/log.service';
 })
 export class LogComponent implements OnInit {
 
-
-  Me : User; 
+    Me : User; 
+    
   
   private _api = "http://localhost:8080/log";
 
@@ -27,6 +27,7 @@ export class LogComponent implements OnInit {
    
     this.http.get('http://localhost:8080/log/entries')
     .subscribe(data=> this._Log.Entries = data.json());
+    console.log(this._Log);
         
 
     this.Me = _Log.Me;

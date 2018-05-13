@@ -3,6 +3,8 @@ export class Log {
     Entries: Entry[]=[];
 
     Users: User;
+    
+    
 }
 
 export class Entry {
