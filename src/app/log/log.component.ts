@@ -37,7 +37,7 @@ export class LogComponent implements OnInit {
     e.preventDefault();
     if(date!="" && musclegroup!="" && workout!="" && reps!=""){
     this._Log.Entries.push({Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this._Log.Me.Name})
-    this.http.post(this._api + "/entries", {Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this._Log.Me.Name});    
+    this.http.post(this._api + "/entries", {Date: date, MuscleGroup: musclegroup, Workout: workout, Reps: reps, Share: false, UserName: this._Log.Me.Name}).subscribe();    
     }
   }
 
