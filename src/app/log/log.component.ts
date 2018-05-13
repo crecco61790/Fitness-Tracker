@@ -23,6 +23,8 @@ export class LogComponent implements OnInit {
     public _Share: ShareService,
     public _Log: LogService
   ) { 
+    this.http.get('http://localhost:8080/log/entries')
+    .subscribe(data=> this._Log.Entries = data.json());
 
     this.Me = _Log.Me;
     if(!this.Me){

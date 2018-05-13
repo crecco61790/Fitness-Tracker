@@ -21,12 +21,15 @@ export class LogService {
         this._Router.navigate(['/log']);
         this.Entries = [];
     }
+    
   }
   oAuthLogin(name: string, token:string){
     this.Me = { Name: name };
     this.token = token;
     this._Router.navigate(['/log']);
 }
+
+
 
 }
 
