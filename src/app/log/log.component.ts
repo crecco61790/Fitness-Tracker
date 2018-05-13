@@ -14,6 +14,7 @@ import { LogService } from '../services/log.service';
 export class LogComponent implements OnInit {
 
     Me : User; 
+    Model= new Log();
     
   
   private _api = "http://localhost:8080/log";
@@ -26,17 +27,32 @@ export class LogComponent implements OnInit {
   ) {
    
     this.http.get('http://localhost:8080/log/entries')
-    .subscribe(data=> this._Log.Entries = data.json());
-    console.log(this._Log);
+    .subscribe(data=> this.Model.Entries = data.json());
+    console.log(this.Model);
         
 
     this.Me = _Log.Me;
     if(!this.Me){
       _Router.navigate(['/login']);
     }
+
+    setTimeout(()=> this.pushMeToLogService(this.Model), 1000);
+
+    console.log(this.Model);
   }
 
   ngOnInit() {
+  }
+
+  pushMeToLogService(Model: Log){
+    this._Log.Entries=[];
+    var i: number;
+    for(i=0; i<Model.Entries.length; i++){
+      if(Model.Entries[i].UserName==this.Me.Name){
+    this._Log.Entries.push(Model.Entries[i]);
+      }
+    }
+    console.log(this._Log.Entries);
   }
 
   postToLog(e: MouseEvent, date: string, musclegroup: string, workout: string, reps: string){
