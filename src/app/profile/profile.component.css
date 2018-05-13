@@ -12,7 +12,10 @@
 .goal {
     text-align: center;
 }
+input{
+    text-align: center;
 
+}
 button {
     border: none;
     outline: 0;
