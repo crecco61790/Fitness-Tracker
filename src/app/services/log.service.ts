@@ -6,10 +6,12 @@ import { ShareService } from './share.service';
 
 @Injectable()
 export class LogService {
-
+  
   Me: User;
   Entries: Entry[];
   token;
+  
+  
 
   constructor(private http: Http, private _Router: Router) {
 
