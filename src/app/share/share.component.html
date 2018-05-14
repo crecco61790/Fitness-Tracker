@@ -1,12 +1,15 @@
 <div class="row">
     <div class="col"> 
         <div class="card" >
-                <div class="form-group">
-                        <label for="typeahead-http">Search for a User:</label>
-                        <input id="typeahead-http" type="text" class="form-control" [class.is-invalid]="searchFailed" [(ngModel)]="model" [ngbTypeahead]="search" placeholder="User" />
-                        <span *ngIf="searching">searching...</span>
-                        <div class="invalid-feedback" *ngIf="searchFailed">Sorry, suggestions could not be loaded.</div>
-                      </div>
+                <label for="typeahead-focus">Search for a User:</label>
+                <input
+                  id="typeahead-focus"
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="model"
+                  [ngbTypeahead]="search"
+                  #instance="ngbTypeahead"
+                />
             <div class="card-header">Swell Board</div>
             <ul class="list-group list-group-flush">
                 <li *ngFor="let share of _Share.Share" class="list-group-item">

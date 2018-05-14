@@ -48,6 +48,7 @@ export class ShareComponent implements OnInit {
   }
   search = (text: Observable<string>) => 
   text.pipe(
-    map(x=> this._Share.ShareUsers )
-  )
+    debounceTime(200),
+    map(x=> (x==='' ? "": this._Share.ShareUsers.filter(v => v.toLowerCase().indexOf(x.toLowerCase()) > -1)).slice(0, 10)))
+  ;
 }
