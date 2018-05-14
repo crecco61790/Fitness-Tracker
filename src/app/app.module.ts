@@ -10,9 +10,12 @@ import { ProfileComponent } from './profile/profile.component';
 import { LogComponent } from './log/log.component';
 import { ShareComponent } from './share/share.component';
 import { LoginComponent } from './login/login.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 import { ShareService } from './services/share.service';
 import { LogService } from './services/log.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +30,9 @@ import { LogService } from './services/log.service';
   ],
   imports: [
     BrowserModule,
+    NgbModule.forRoot(),
     HttpModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: 'profile', component: ProfileComponent},

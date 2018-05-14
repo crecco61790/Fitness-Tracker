@@ -1,7 +1,7 @@
 export class Share {
     //help differentiate models, not necessary
     Entries: Entry[]=[];
-
+    SharedUsers: User[];
     Users: User;
 }
 

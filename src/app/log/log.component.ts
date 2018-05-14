@@ -29,6 +29,7 @@ export class LogComponent implements OnInit {
     this.http.get('http://localhost:8080/log/entries')
     .subscribe(data=> this.Model.Entries = data.json());
     console.log(this.Model);
+
         
     //ensures user is logged in
     this.Me = _Log.Me;
