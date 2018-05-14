@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LogService } from '../services/log.service';
 import { ShareService } from '../services/share.service';
-
+//no implicite any
 declare var googleyolo: any;
 declare var window: any;
 
@@ -16,11 +16,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  //log component calls login method
   login(name: string, password: string){
     this._Log.login(name, password);
 }
-
+//google api
 googlelogin(){
   googleyolo.hint({
       supportedAuthMethods: [

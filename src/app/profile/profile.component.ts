@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
     public _Share: ShareService,
     public _Log: LogService
   ) { 
-
+    //ensure user is logged in
     this.Me = _Log.Me;
     if(!this.Me){
       _Router.navigate(['/login']);

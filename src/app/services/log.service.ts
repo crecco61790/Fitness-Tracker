@@ -6,7 +6,7 @@ import { ShareService } from './share.service';
 
 @Injectable()
 export class LogService {
-  
+  //entries accessible to all componenets
   Me: User;
   Entries: Entry[];
   token;

@@ -1,5 +1,5 @@
 export class Share {
-
+    //help differentiate models, not necessary
     Entries: Entry[]=[];
 
     Users: User;

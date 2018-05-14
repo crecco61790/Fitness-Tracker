@@ -5,7 +5,7 @@ import { Log, Entry, User } from '../models/log';
 
 @Injectable()
 export class ShareService {
-
+  //array of shared entries accessible to all componenets
   Share: Entry[];
 
   constructor() { 

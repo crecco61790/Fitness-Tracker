@@ -21,6 +21,7 @@ export class Entry {
         this.Workout = Workout;
         this.Reps = Reps;
         this.UserName = UserName;
+        //part of design, app not grown to need
         this.Share = false;
     }
 }
