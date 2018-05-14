@@ -29,16 +29,13 @@ export class ShareComponent implements OnInit {
 
   ) { 
     this.Me = _Log.Me;
+    //get function retrieves entries & users from server
     this.http.get('http://localhost:8080/log/share')
     .subscribe(data=> this._Share.Share = data.json());
-
+    //generateUsers() creates an array of unique users on server
     setTimeout(()=> this._Share.generateUsers(), 1000);
-    ;
-    /*var i: number;
-    for(i=0; i<_Share.Share.length; i++){
-      this._Share.ShareUsers.push(this._Share.Share[i].UserName)
-    }
-    console.log(this._Share.ShareUsers);*/
+    
+
     
     if(!this.Me){
       _Router.navigate(['/login']);
