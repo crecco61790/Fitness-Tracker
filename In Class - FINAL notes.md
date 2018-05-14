@@ -10,6 +10,6 @@ currently only users who have already posted a shared array will returned on typ
 
 Display is kind of funny, doesn't display only matching users... working on that.
 
-
+Display has been fixed!
 
 
